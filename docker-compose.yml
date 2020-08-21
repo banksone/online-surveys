@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+#  osrv-web:
+#    build: ./app
+#    command: python manage.py runserver 0.0.0.0:8000
+#    volumes:
+#      - ./app/:/usr/src/app/
+#    ports:
+#      - 8000:8000
+#    env_file:
+#      - ./.env.dev
+#    depends_on:
+#      - osrv-mongo
+
+  osrv-mongo:
+    image: mvertes/alpine-mongo
+    volumes:
+      - osrv_mongo_data:/data/db
+    restart: always
+    command: [ "mongod", "--bind_ip", "0.0.0.0" ]
+    ports:
+      - 27017:27017
+
+volumes:
+  osrv_mongo_data:
