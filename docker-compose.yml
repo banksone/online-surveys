@@ -1,13 +1,25 @@
-version: '3.7'
+version: '3'
 
 services:
-#  osrv-web:
+  osrv-public:
+    build: ./app
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./app/public:/usr/src/app/
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - osrv-mongo
+
+#  osrv-admin:
 #    build: ./app
 #    command: python manage.py runserver 0.0.0.0:8000
 #    volumes:
-#      - ./app/:/usr/src/app/
+#      - ./app/admin:/usr/src/app/
 #    ports:
-#      - 8000:8000
+#      - 8001:8000
 #    env_file:
 #      - ./.env.dev
 #    depends_on:
