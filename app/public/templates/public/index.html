@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<link rel="stylesheet" href="/static/public/orange_cat.css">
 
 </head>
 
@@ -9,12 +9,12 @@
 <div class="container">
 	<div class="header">
 		<div class="titletext">ORANGE CAT SURVEYS</div>
-		<img src="static/public/kitten_logo.png"/>
+		<img src="/static/public/kitten_logo.png"/>
 	</div>
 
 	<div class="survey">
 		<div class="sheader">
-			<img src="static/public/{{ banner }}"/>
+			<img src="/static/public/{{ banner }}"/>
 			<div class="stitle">{{ title }}</div>
 		</div>
 		<form action="/survey-save/" method="post">
@@ -42,125 +42,6 @@
 </body>
 
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Russo+One&display=swap');
-
-body {
-	margin: 0px;
-}
-
-.container {
-	width: 100%;
-	font-family: 'Poppins', sans-serif;
-	margin: 0px;
-	padding: 0px;
-	font-size: 28px;
-	min-height: 100vh;
-	position: relative;
-}
-
-.header {
-	width: 100%;
-	height: 60px;
-	margin: 0px;
-	background: #333333;
-	padding: 0px;
-	font-family: 'Poppins', sans-serif;	
-	color: #EC9312;
-}
-
-.titletext {
-	text-align: center;
-	font-size: 1.5em;
-	height: 58px;
-	padding: 0px;
-}
-
-.header img {
-	position: absolute;
-	left: 15px;
-	top: 3px;
-	display: block;
-	height: 52px; 
-}
-
-.footer {
-	width: 100%;
-	height: 150px;
-	bottom: 0px;
-	margin: 0px;
-	background: #333333;
-	padding: 0px;
-	font-family: 'Poppins', sans-serif;	
-	color: #EC9312;
-	position: absolute;
-}
-
-.survey {
-	padding: 0px;	
-	width: 60%;
-	margin-left: auto;
-	margin-right: auto;
-	background: #eeeeee;
-	position: relative;
-	padding-bottom: 220px;
-}
-
-.survey textarea {
-	min-width: 100%; 
-	max-width: 100%;
-}
-
-.survey input[type=submit] {
-	background-color: #EC9312;
-	border: none;
-	color: #333333;
-	width: 400px;
-	text-align: center; 
-	padding: 16px 32px;
-	text-decoration: none;
-	margin: 10px;
-	font-weight: 600;
-	cursor: pointer;
-}
-
-.submit-holder {
-	text-align: center;
-}
-
-.sheader {
-	width: 100%;
-	margin: 0px;
-	padding: 0px;
-	font-family: 'Poppins', sans-serif;
-	color: #eeeeee;
-	position: relative;
-}
-
-.sheader img {
-	width: 100%;
-	margin: 0px;
-	padding: 0px;
-	display: block;
-}
-
-.sheader .stitle {
-	position: absolute;	
-	top: 0px;
-	margin: 0px;
-	padding: 20px;
-	font-size: 2em;
-	font-weight: 700;
-	display: block; 
-}
-
-.question {
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-
-
 </style>
 
 </html>
