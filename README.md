@@ -1,2 +1,2 @@
 # online-surveys
-Dockerized Python app for online survays
+Simple dockerized Python/Django app for online survays
