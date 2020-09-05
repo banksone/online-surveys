@@ -10,6 +10,9 @@ services:
       - 8000:8000
     env_file:
       - ./.env.dev
+    environment:
+      - DB_ADDRESS=osrv-mongo
+      - DB_PORT=27017
     depends_on:
       - osrv-mongo
 

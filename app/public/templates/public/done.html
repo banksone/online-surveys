@@ -17,24 +17,7 @@
 			<img src="static/public/{{ banner }}"/>
 			<div class="stitle">{{ title }}</div>
 		</div>
-		<form action="/survey-save/" method="post">
-		    {% csrf_token %}
-		    {{ form }}
-			<input type="hidden" name="id" value="{{id}}"/>
-			{% if question_list %}
-			    <div class="question">
-			    {% for question in question_list %}
-				<p>{{ question.text }}</p>
-				<textarea id="{{question.id}}" name="{{question.id}}" rows="4"></textarea>
-			    {% endfor %}
-			    </div>
-			{% else %}
-			    <p>No surevy available.</p>
-			{% endif %}
-		<div class="submit-holder">
-		<input type="submit" value="{{ submit }}">
-		</div>
-		</form>
+		<h1>survey is done. thanks!</h1>
 	</div><!-- survey -->
 
 	<div class="footer"></div>
