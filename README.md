@@ -1,10 +1,8 @@
 # online-surveys
-An example of simple, dockerized Python/Django app for online survays
-
-App uses two collections in Mongodb: surveys and answers.
-Surveys contains survey definitions. Answers collection contains records with asks to fill in a survey. All answers will be added to such a record togather with information closing the ask (the survay cannot be opened again after it was answered).
-
+An example of a simple, dockerized Python/Django app for online surveys
+App uses two collections in MongoDB: surveys and answers. Surveys contain survey definitions. Answers collection contains records with asks to fill in a survey. All answers will be added to such a record together with information closing the ask (the survey cannot be opened again after it was answered).
 Example of a survey definition:
+
 ```
 {
     "_id" : ObjectId("5f525203b0ee31c08c7f10b9"),
